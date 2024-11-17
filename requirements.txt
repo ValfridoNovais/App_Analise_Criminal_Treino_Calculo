@@ -1,3 +1,4 @@
+pip==24.3.1
 streamlit==1.25.0
 pandas==2.2.3
 matplotlib==3.9.2
@@ -5,4 +6,4 @@ numpy==1.26.4
 requests==2.32.3
 validators==0.34.0
 pyarrow==18.0.0
-pillow==9.5.0 --only-binary :all:
+pillow>=10.0.0
