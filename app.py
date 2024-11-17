@@ -71,9 +71,6 @@ sidebar_style = """
     .sidebar-content {
         margin-top: -80px; /* Ajusta o espaço superior do conteúdo */
     }
-    img {
-        margin-top: -60px; /* Reduz o espaço acima da imagem */
-    }
     </style>
 """
 # Estilo para ajustar o conteúdo principal
