@@ -103,12 +103,8 @@ st.markdown(table_style, unsafe_allow_html=True)
 
 st.markdown(sidebar_style, unsafe_allow_html=True)
 # Adicionando uma imagem no início do sidebar
-st.sidebar.image(
-    "C:/Repositorios_GitHube/MeusProjetos/Analise_CV/APM2.png",
-    caption="Logo da Análise CV",
-    width=150,  # Define a largura da imagem em pixels
-   
-)
+st.sidebar.image("C:/Repositorios_GitHube/MeusProjetos/App_Analise_Criminal_Treino_Calculo/APM2.png", caption="Logo da Análise CV", width=150)
+
 
 # Adicionando texto no sidebar com Markdown
 st.sidebar.markdown("""
