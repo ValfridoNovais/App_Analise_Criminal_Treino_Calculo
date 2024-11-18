@@ -133,6 +133,13 @@ def verificar_resposta(valor_calculado, valor_digitado):
 
 # Layout principal para IMV e IMT
 if menu == "IMV" or menu == "IMT":
+    # Configurar menu1 com base no indicador
+    if menu == "IMV":
+        menu1 = "MV"
+    elif menu == "IMT":
+        menu1 = "MT"
+    else:
+        menu1 = menu
     # Instruções
     st.title(f"Tabela de {menu}")
     st.markdown("**Formatação da tabela:**")
@@ -151,10 +158,8 @@ if menu == "IMV" or menu == "IMT":
         cols = [menu]
 
         # Inicializar estado da sessão
-        if menu == "IMV":
-                menu1 = "MV"
-        elif menu == "IMT":
-               menu1 = "MT"
+        if menu == "IMV" or menu == "IMT":
+        
         
         if f"valores_{menu}" not in st.session_state:
             st.session_state[f"valores_{menu}"] = [[0] * len(cols) for _ in range(len(rows))]
