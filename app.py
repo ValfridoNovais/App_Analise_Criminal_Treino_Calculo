@@ -158,9 +158,6 @@ if menu == "IMV" or menu == "IMT":
         cols = [menu]
 
         # Inicializar estado da sessão
-        if menu == "IMV" or menu == "IMT":
-        
-        
         if f"valores_{menu}" not in st.session_state:
             st.session_state[f"valores_{menu}"] = [[0] * len(cols) for _ in range(len(rows))]
 
