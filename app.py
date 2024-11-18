@@ -151,6 +151,11 @@ if menu == "IMV" or menu == "IMT":
         cols = [menu]
 
         # Inicializar estado da sessão
+        if menu == "IMV":
+                menu1 = "MV"
+        elif menu == "IMT":
+               menu1 = "MT"
+        
         if f"valores_{menu}" not in st.session_state:
             st.session_state[f"valores_{menu}"] = [[0] * len(cols) for _ in range(len(rows))]
 
@@ -178,7 +183,7 @@ if menu == "IMV" or menu == "IMT":
         # Cálculos do IMV ou IMT
         with st.expander("Cálculos do Indicador", expanded=True):
             st.markdown("### Fórmula")
-            st.latex(rf"{menu} = \frac{{\text{{{menu}}}}}{{\text{{POP}}}} \times 100.000")
+            st.latex(rf"{menu} = \frac{{\text{{{menu1}}}}}{{\text{{POP}}}} \times 100.000")
             for i, row in enumerate(rows):
                 valor_calculado = truncar((df.loc[row, menu] / populacao) * 100000, 2)
                 resposta_digitada = st.number_input(
