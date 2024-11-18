@@ -207,7 +207,7 @@ if menu == "IMV" or menu == "IMT":
 
                     # Mostra a fórmula
                     st.markdown("### Fórmula da Variação")
-                    st.latex(r"\text{Variação} = \frac{\text{Valor inicial (2023)} - \text{Valor inicial (2022)}}{\text{Valor inicial (2022)}} \times 100")
+                    st.latex(r"\text{Variação} = \frac{\text{Valor Final (2023)} - \text{Valor Inicial (2022)}}{\text{Valor Inicial (2022)}} \times 100")
 
                     # Campo para o aluno inserir a variação calculada
                     variacao_digitada = st.number_input(
