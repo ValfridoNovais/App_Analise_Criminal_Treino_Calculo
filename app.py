@@ -368,8 +368,11 @@ if menu == "ICCP":
                     furto_2023 = df_iccp.loc["FURTO", "2023"]
 
                     variacao_calculada = truncar(((furto_2023 - furto_2022) / furto_2022) * 100, 2)
-                   st.latex(r"\text{Variação} = \frac{\text{Valor Final (2023)} - \text{Valor Inicial (2022)}}{\text{Valor Inicial (2022)}} \times 100")
 
+                    # Mostra a fórmula
+                    st.markdown("### Fórmula da Variação")
+                    st.latex(r"\text{Variação} = \frac{\text{Valor Final (2023)} - \text{Valor Inicial (2022)}}{\text{Valor Inicial (2022)}} \times 100")
+                    
                     variacao_digitada = st.number_input(
                         "Digite a variação calculada de FURTO (com 2 casas decimais):",
                         min_value=-100.0,
