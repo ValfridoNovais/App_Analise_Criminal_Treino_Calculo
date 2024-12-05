@@ -378,10 +378,17 @@ if menu == "ICCP":
             # Cálculo da Variação
             with st.expander("Cálculo da Variação", expanded=True):
                 try:
-                    furto_2022 = df_iccp.loc["FURTO", "2022"]
-                    furto_2023 = df_iccp.loc["FURTO", "2023"]
+                    # Substituir os valores pelos resultados do ICCP já calculados
+                    iccp_2022 = truncar(((df_iccp.loc["ROUBO", "2022"] * fatores["2022"]) + 
+                                        (df_iccp.loc["EXTORSÃO", "2022"] * fatores["2022"]) + 
+                                        df_iccp.loc["FURTO", "2022"]) / populacao * 100, 2)
 
-                    variacao_calculada = truncar(((furto_2023 - furto_2022) / furto_2022) * 100, 2)
+                    iccp_2023 = truncar(((df_iccp.loc["ROUBO", "2023"] * fatores["2023"]) + 
+                                        (df_iccp.loc["EXTORSÃO", "2023"] * fatores["2023"]) + 
+                                        df_iccp.loc["FURTO", "2023"]) / populacao * 100, 2)
+
+                    # Cálculo da variação entre os ICCPs
+                    variacao_calculada = truncar(((iccp_2023 - iccp_2022) / iccp_2022) * 100, 2)
 
                     # Mostra a fórmula
                     st.markdown("""
