@@ -213,8 +213,11 @@ if menu == "IMV" or menu == "IMT":
                     variacao_calculada = truncar(((df.loc["2023", menu] - df.loc["2022", menu]) / df.loc["2022", menu]) * 100, 2)
 
                     # Mostra a fórmula
-                    st.markdown("### Fórmula da Variação")
-                    st.latex(r"\text{Variação} = \frac{\text{Valor Final (2023)} - \text{Valor Inicial (2022)}}{\text{Valor Inicial (2022)}} \times 100")
+                    st.markdown("""
+                        ### Fórmula da Variação
+                        VF = VALOR FINAL
+                        VI = VALOR INICIAL""")
+                    st.latex(r"\text{Variação} = \frac{\text{VF (2023)} - \text{VI (2022)}}{\text{VI (2022)}} \times 100")
 
                     # Campo para o aluno inserir a variação calculada
                     variacao_digitada = st.number_input(
@@ -370,8 +373,11 @@ if menu == "ICCP":
                     variacao_calculada = truncar(((furto_2023 - furto_2022) / furto_2022) * 100, 2)
 
                     # Mostra a fórmula
-                    st.markdown("### Fórmula da Variação")
-                    st.latex(r"\text{Variação} = \frac{\text{Valor Final (2023)} - \text{Valor Inicial (2022)}}{\text{Valor Inicial (2022)}} \times 100")
+                    st.markdown("""
+                        ### Fórmula da Variação
+                        VF = VALOR FINAL
+                        VI = VALOR INICIAL""")
+                    st.latex(r"\text{Variação} = \frac{\text{VF (2023)} - \text{VI (2022)}}{\text{VI (2022)}} \times 100")
                     
                     variacao_digitada = st.number_input(
                         "Digite a variação calculada de FURTO (com 2 casas decimais):",
