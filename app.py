@@ -335,9 +335,18 @@ if menu == "ICCP":
 
             # Fórmula do ICCP
             with st.expander("Cálculos do ICCP", expanded=True):
-                st.markdown("#### Fórmula do ICCP")
+                st.markdown("""
+                    #### Fórmula do ICCP
+                    **F** = FURTO
+
+                    **R** = ROUBO
+
+                    **E** = EXTORSÃO
+
+                    **F ∝ R** = Fator
+                    """)
                 st.latex(r"""
-                    \text{ICCP} = \frac{{(\text{ROUBO} \cdot \text{F ∝ R}) + (\text{EXTORSÃO} \cdot \text{F ∝ R}) + \text{FURTO}}}{{\text{POP}}} \times 100
+                    \text{ICCP} = \frac{{(\text{R} \cdot \text{Fator}) + (\text{E} \cdot \text{Fator}) + \text{F}}}{{\text{POP}}} \times 100
                 """)
 
                 # Cálculo do ICCP
