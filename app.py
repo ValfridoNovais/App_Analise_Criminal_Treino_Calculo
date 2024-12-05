@@ -338,7 +338,7 @@ if menu == "ICCP":
                 st.markdown("""
                     #### Fórmula do ICCP
                      """)
-                     with st.expander("Siglas", expanded=True):
+                     st.expander("Siglas", expanded=True):
                         st.markdown("""**F** = FURTO
 
                             **R** = ROUBO
