@@ -345,6 +345,7 @@ if menu == "ICCP":
                         **E** = EXTORSÃO  
                         **F ∝ R** = Fator
                     """)
+                    
                 st.latex(r"""
                     \text{ICCP} = \frac{{(\text{R} \cdot \text{Fator}) + (\text{E} \cdot \text{Fator}) + \text{F}}}{{\text{POP}}} \times 100
                 """)
