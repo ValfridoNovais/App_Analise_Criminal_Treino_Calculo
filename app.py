@@ -215,8 +215,9 @@ if menu == "IMV" or menu == "IMT":
                     # Mostra a fórmula
                     st.markdown("""
                         ### Fórmula da Variação
-                        VF = VALOR FINAL
-                        VI = VALOR INICIAL""")
+                        **VF** = VALOR FINAL
+                        
+                        **VI** = VALOR INICIAL""")
                     st.latex(r"\text{Variação} = \frac{\text{VF (2023)} - \text{VI (2022)}}{\text{VI (2022)}} \times 100")
 
                     # Campo para o aluno inserir a variação calculada
@@ -375,8 +376,9 @@ if menu == "ICCP":
                     # Mostra a fórmula
                     st.markdown("""
                         ### Fórmula da Variação
-                        VF = VALOR FINAL
-                        VI = VALOR INICIAL""")
+                        **VF** = VALOR FINAL
+
+                        **VI** = VALOR INICIAL""")
                     st.latex(r"\text{Variação} = \frac{\text{VF (2023)} - \text{VI (2022)}}{\text{VI (2022)}} \times 100")
                     
                     variacao_digitada = st.number_input(
