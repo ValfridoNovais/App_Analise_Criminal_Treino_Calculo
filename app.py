@@ -337,15 +337,15 @@ if menu == "ICCP":
             with st.expander("Cálculos do ICCP", expanded=True):
                 st.markdown("""
                     #### Fórmula do ICCP
-                     """)
-                with st.expander("Siglas", expanded=True):
-                    st.markdown("""
-                        **F** = FURTO  
-                        **R** = ROUBO  
-                        **E** = EXTORSÃO  
-                        **F ∝ R** = Fator
-                    """)
                     
+                    **F** = FURTO
+
+                    **R** = ROUBO
+
+                    **E** = EXTORSÃO
+
+                    **F ∝ R** = Fator
+                    """)
                 st.latex(r"""
                     \text{ICCP} = \frac{{(\text{R} \cdot \text{Fator}) + (\text{E} \cdot \text{Fator}) + \text{F}}}{{\text{POP}}} \times 100
                 """)
